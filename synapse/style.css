@@ -1,0 +1,86 @@
+#wrapper {
+	display: flex;
+	border: none;
+	justify-content: space-around;
+}
+
+#wrapper > div {
+	padding: 10px;
+}
+
+div {
+	border-style: solid;
+}
+
+#about {
+	width: 600px;
+	height: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#modules {
+	width: 600px;
+	height: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#invite-me {
+	width: 600px;
+	height: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+#module-display {
+	border: none;
+}
+
+#module-display-syntax {
+	font-style: normal;
+}
+
+
+
+
+.dropbtn {
+	background-color: white;
+	color: black;
+	border: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	border: 2px solid black;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: lightgray;
+	min-width: 160px;
+	border: 1px solid black;
+}
+
+/* Displays the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+	border: 2px solid black;
+}
+
+.module-select {
+	color: black;
+	text-decoration: none;
+	display: block;
+	border: none;
+}
+
+.module-select-btn {
+	border: none;
+	background-color: ligthgray;
+	width: 100%;
+}
