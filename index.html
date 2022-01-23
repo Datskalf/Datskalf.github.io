@@ -2,18 +2,23 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css"/>
+
+		<script src="./global-scripts/navbar.js"></script>
 	</head>
 	<body>
-		<h1>Hello world</h1>
-		<p>I'm hosted with GitHub Pages</p>
+		<div class="sidenav" id="sidenav">
+			<span>Menu</span>
+			<hr />
+			<a href="#">Home</a>
+			<a href="./synapse/index.html">Synapse</a>
+			<a href="./social-medias/index.html">Social medias</a>
+		</div>
 
-		<button onclick="toggleDarkMode()">Toggle dark mode</button>
+		<span onclick="toggleNav()" class="menu-icon"><img src="./media/menu-icon.png" width="40px" height="40px"/></span>
 
-		<script>
-			function toggleDarkMode() {
-				var element = document.body;
-				element.classList.toggle("dark-mode")
-			}
-		</script>
+		<div id="main" class="main">
+			<center><h1>Datskalf</h1></center>
+			<hr />
+		</div>
 	</body>
 </html>

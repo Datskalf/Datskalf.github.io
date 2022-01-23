@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Synapse home page</title>
-		<link rel="stylesheet" href="style.css"/>
-
-		<script>
-			function showModule(moduleName) {
-				moduleDisplay = document.getElementById("module-display");
-				title = document.getElementById("module-display-title");
-				syntax = document.getElementById("module-display-syntax");
-				content = document.getElementById("module-display-text");
-
-				switch(moduleName) {
-					case 'apod':
-						title.innerHTML = "Astronomy Picture Of the Day";
-						syntax.innerHTML = "Syntax: !APOD";
-						content.innerHTML = "This module will send NASAs \"Astronomy Picture Of the Day\".<br/>";
-						content.innerHTML += "The image is accompanied by the title and copyright of the image,<br/>";
-						content.innerHTML += "as well as the date it was requested and a description.";
-						break;
-					case 'rovers':
-						title.innerHTML = "Mars rovers";
-						syntax.innerHTML = "Syntax: !rover ([ Rover name || \"Cam\" ]) ([ Camera abbreviation || \"Any\" ])";
-						content.innerHTML = "";
-						break;
-				}
-			}
-		</script>
+		<title>Synapse</title>
+		<link rel="stylesheet" href="../style.css" />
+		<script src="../global-scripts/navbar.js"></script>
 	</head>
+
 	<body>
-		<center><h1>Synapse homepage</h1></center>
-		<hr/>
+		<div class="sidenav" id="sidenav">
+			<span>Menu</span>
+			<hr />
+			<a href="../index.html">Home</a>
+			<a href="../synapse/index.html">Synapse</a>
+			<a href="#">Social medias</a>
+		</div>
+		<span onclick="toggleNav()" class="menu-icon"><img src="../media/menu-icon.png" width="40px" height="40px" /></span>
 
-		<div id="wrapper">
-
-			<div id="about">
-				<center><h2>About me</h2></center>
-				<hr/>
-				<p>Hello, I am a discord bot made by <a href="https://twitter.com/Datskalf_Live" target="_blank">Datskalf</a>.</p>
-				<p>I was created as a test using the discordpy library, but it turns out I was actually useful!</p>
-				<br/>
-			</div>
-			<br/>
-
-
-			<div id="modules">
-				<center><h2>My Modules</h2></center>
-				<hr/>
-
-				<p>Select a module from the menu below to read more about it</p>
-				<div class="dropdown">
-					<button class="dropbtn">Module</button>
-					<div class="dropdown-content">
-						<div class="module-select">
-							<center><button class="module-select-btn" onclick="showModule('apod')">APOD</button></center>
-						</div>
-						<div class="module-select">
-							<center><button class="module-select-btn" onclick="showModule('rovers')">Mars rover</button></center>
-						</div>
-					</div>
-				</div>
-
-				<div id="module-display">
-					<center><h3 id="module-display-title"></h3></center>
-					<center><p id="module-display-syntax"></p></center>
-					<center><p id="module-display-text"></p></center>
-				</div>
-			</div>
-
-
-			<div id="invite-me">
-
-			</div>
-
+		<div class="main" id="main">
+			<center><h1>Synapse Discord Bot</h1></center>
+			<hr />
 		</div>
 	</body>
 </html>
