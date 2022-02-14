@@ -1,6 +1,13 @@
 body {
 	background-color: #333;
+	color: #BBB;
 }
+
+h1 {
+	color: #DDD;
+}
+
+
 
 .navbar {
 	background-color: #111;
@@ -51,15 +58,4 @@ body {
 .social-media-icon {
 	width: 100px;
 	border-radius: 50%;
-}
-
-
-
-
-
-.main {
-	margin-left: 50px;
-	padding: 0px 10px;
-	transition: 0.5s;
-	color: #DDD;
 }
