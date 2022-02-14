@@ -2,54 +2,31 @@ body {
 	background-color: #333;
 }
 
-.sidenav {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
+.navbar {
+	background-color: #111;
+	color: #DDD;
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+	padding: 5px;
+	text-align: center;
+
+	position: absolute;
 	left: 0;
-	background-color: #444;
-	overflow-x: hidden;
-	padding-top: 60px;
-	transition: 0.5s;
-}
-
-.sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 20px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidenav span {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 40px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-.sidenav a:hover {
-	color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-	position: absolute;
 	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
+	right: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
-.menu-icon {
-	top: 2px;
-	left: 10px;
-	position: absolute;
-	z-index: 2;
+.navbar div {
+	width: 160px;
+	border: 2px solid #444;
+	cursor: pointer;
+}
+
+.navbar div:hover {
+	background-color: #222;
 }
 
 
@@ -74,14 +51,11 @@ body {
 
 
 
+
+
 .main {
 	margin-left: 50px;
 	padding: 0px 10px;
 	transition: 0.5s;
 	color: #DDD;
-}
-
-@media screen and (max-height: 150px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
 }
