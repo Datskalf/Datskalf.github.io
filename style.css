@@ -9,23 +9,27 @@ body {
 	padding: 5px;
 	text-align: center;
 
-	position: absolute;
-	left: 0;
+	position: sticky;
+	position: -webkit-sticky;
 	top: 0;
-	right: 0;
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
-.navbar div {
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar-button {
 	width: 160px;
 	border: 2px solid #444;
 	cursor: pointer;
+	color: #DDD;
 }
 
-.navbar div:hover {
+.navbar-button:hover {
 	background-color: #222;
 }
 
