@@ -31,7 +31,7 @@ h1 {
 }
 
 .navbar-button {
-	width: 160px;
+	width: 150px;
 	border: 2px solid #444;
 	cursor: pointer;
 	color: #DDD;
@@ -43,9 +43,11 @@ h1 {
 
 
 @media only screen and (max-width: 600px) {
+
 	.navbar-button {
-		width: 120px;
-		padding: 3px;
+		font-size: 9px;
+		width: 80px;
+		padding: 1px;
 		text-align: center;
 	}
 }
