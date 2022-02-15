@@ -43,8 +43,10 @@ h1 {
 
 
 @media only screen and (max-width: 600px) {
-	body {
-		background-color: #EEE;
+	.navbar-button {
+		width: 120px;
+		padding: 3px;
+		text-align: center;
 	}
 }
 
