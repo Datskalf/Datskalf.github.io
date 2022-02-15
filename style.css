@@ -12,6 +12,7 @@ h1 {
 
 .navbar {
 	background-color: #111;
+	border: 2px solid #222;
 	color: #DDD;
 	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 	padding: 5px;
@@ -23,7 +24,8 @@ h1 {
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
+	gap: 5px;
 }
 
 .navbar a {
