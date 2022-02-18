@@ -12,6 +12,8 @@ h1 {
 
 .navbar {
 	background-color: #111;
+	border: 5px solid #222;
+	border-radius: 8px;
 	color: #DDD;
 	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 	padding: 3px;
@@ -53,8 +55,9 @@ h1 {
 }
 
 .navbar-button {
-	width: 160px;
+	width: 150px;
 	border: 2px solid #444;
+	border-radius: 6px;
 	cursor: pointer;
 	color: #DDD;
 
@@ -64,6 +67,17 @@ h1 {
 
 .navbar-button:hover {
 	background-color: #222;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.navbar-button {
+		font-size: 9px;
+		width: 80px;
+		padding: 1px;
+		text-align: center;
+	}
 }
 
 
