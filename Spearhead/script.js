@@ -19,6 +19,10 @@ for (var i = 0; i < imgs.length; i++) {
 	}
 }
 
+
+
+
+
 function showImg(e) {
-	window.open(e.src, "_blank");
+	window.open(e.src);
 }
