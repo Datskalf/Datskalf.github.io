@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <HTML>
 	<head>
-		<style>
-			body {
-				background-color: gray;
-			}
-
-			img {
-				border: 2px solid black;
-				margin: 2px;
-			}
-		</style>
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
 		<center><h1>Spearhead student rocket gallery</h1></center>
-		<hr/>
-		<img src="./Group_1.png" width="600px"/>
-		<img src="./Group_2.png" width="600px"/>
-		<img src="./Group_3.jpg" width="600px"/>
+		<hr/> <br/>
+		
+		<button type="button" class="collapsible">By Sondre Mathias Meiland-Flakstad</button>
+		<div class="content">
+			<img src="./Images/Sondre/Group_1.png" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/Group_2.png" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/Group_3.jpg" onclick="showImg(this)"/>
 
-		<img src="./Pad_1.jpg" width="600px"/>
-		<img src="./Pad_2.jpg" width="600px"/>
-		<img src="./Pad_3.jpg" width="600px"/>
+			<img src="./Images/Sondre/RC_1.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/RC_2.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/RC_3.png" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/RC_4.png" onclick="showImg(this)"/>
+			<img src="./Images/Sondre/RC_5.png" onclick="showImg(this)"/>
+		</div>
 
-		<img src="./RC_1.jpg" width="600px"/>
-		<img src="./RC_2.jpg" width="600px"/>
-		<img src="./RC_3.png" width="600px"/>
+		<br/>
 
-		<img src="./RC_4.png" width="600px"/>
-		<img src="./RC_5.png" width="600px"/>
-		<img src="./StudentTM_1.jpg" width="600px"/>
+		<button type="button" class="collapsible">By Benjamin Furre</button>
+		<div class="content">
+			<img src="./Images/Benjamin Furre/Furre_1.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_2.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_3.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_4.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_5.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_6.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_7.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_8.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_9.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_10.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_11.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_12.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_13.jpg" onclick="showImg(this)"/>
+			<img src="./Images/Benjamin Furre/Furre_14.jpg" onclick="showImg(this)"/>
+		</div>
+
+		<br/>
+
+		<button type="button" class="collapsible">By Jonathan Thurley Skrøppa</button>
+		<div class="content">
+			<img src="./Images/Jonathan Skroppa/StudentTM_1.jpg" onclick="showImg(this)"/>
+		</div>
+
+
+		<script src="./script.js"></script>
 	</body>
 </HTML>
