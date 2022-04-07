@@ -14,6 +14,7 @@ img {
 	background-color: #bbb;
 	color: #444;
 	font-size: large;
+	font-weight: bold;
 	cursor: pointer;
 	width: 100%;
 	height: 50px;
