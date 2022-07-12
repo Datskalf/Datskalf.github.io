@@ -24,12 +24,15 @@ img {
 	background-color: #ddd;
 }
 
-.content {
+.collapsible-content {
 	padding: 0 18px;
 	overflow: hidden;
 	background-color: #aaa;
 	max-height: 0;
 	transition: max-height 0.4s ease-out;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
 }
 
 
