@@ -1,1 +1,0 @@
-$("#sidebar").load("datskalf.github.io/Aurorium/statics/sidebar.html")
