@@ -6,10 +6,12 @@ body {
 #topbar {
     width: 100%;
     height: 50px;
+    background-color: blue;
 }
 
 #sidebar {
     width: 340px;
+    margin-top: 20px;
     padding-left: 40px;
     float: left;
     text-align: left;
@@ -18,6 +20,7 @@ body {
 }
 
 #mainContent {
+    margin-top: 20px;
     margin-left: 420px;
     margin-right: 150px;
 
@@ -35,4 +38,8 @@ h1 {
 hr {
     border: 1px solid black;
     border-radius: 500px;
+}
+
+iframe {
+    border: none;
 }
