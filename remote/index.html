@@ -20,17 +20,20 @@
     </head>
     <body>
         <div id="buttonGrid">
-            <div id="row1">
+            <div class="gridrow">
+                <p id="output"></p>
+            </div>
+            <div class="gridrow" id="row1">
                 <canvas></canvas>
                 <canvas class="dirBtn" id="btnUp"></canvas>
                 <canvas></canvas>
             </div>
-            <div id="row2">
+            <div class="gridrow" id="row2">
                 <canvas class="dirBtn" id="btnLeft"></canvas>
                 <canvas class="actionBtn" id="btnFire"></canvas>
                 <canvas class="dirBtn" id="btnRight"></canvas>
             </div>
-            <div id="row3">
+            <div class="gridrow" id="row3">
                 <canvas></canvas>
                 <canvas class="dirBtn" id="btnDown"></canvas>
                 <canvas></canvas>
@@ -42,6 +45,7 @@
             var btnDown = document.getElementById("btnDown");
             var btnLeft = document.getElementById("btnLeft");
             var btnRight = document.getElementById("btnRight");
+            var output = document.getElementById("output");
 
             btnUp.addEventListener("onmousedown", function() {sendDirection("UP", true)});
             btnUp.addEventListener("pointerdown", function() {sendDirection("UP", true)});
@@ -66,6 +70,7 @@
 
 
             function sendDirection(btn, state) {
+                output.innerText = "Button: " + btn + "; state: " + state;
                 console.log("Button: " + btn + "; state: " + state);
                 return;
                 fetch("http://datsom.local:8080", {
