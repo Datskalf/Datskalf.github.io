@@ -21,8 +21,8 @@
     <body>
         <div id="buttonGrid">
             <div class="gridrow">
-                <p>Last command: </p>
-                <p id="output"></p>
+                <p>Last command: <div id="output">none</div></p>
+                
             </div>
             <div class="gridrow" id="row1">
                 <canvas></canvas>
@@ -69,8 +69,8 @@
             btnRight.addEventListener("onmouseup", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": false})});
             btnRight.addEventListener("pointerup", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": false})});
 
-            btnFire.addEventListener("onmousedown", function() {sendAction({"action": "FIRE", "state": false})});
-            btnFire.addEventListener("pointerdown", function() {sendAction({"action": "FIRE", "state": false})});
+            btnFire.addEventListener("pointerdown", function() {sendAction({"action": "FIRE", "state": true})});
+            btnFire.addEventListener("onmousedown", function() {sendAction({"action": "FIRE", "state": true})});
             btnFire.addEventListener("onmouseup", function() {sendAction({"action": "FIRE", "state": false})});
             btnFire.addEventListener("pointerup", function() {sendAction({"action": "FIRE", "state": false})});
 
