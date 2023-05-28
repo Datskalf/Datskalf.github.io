@@ -49,30 +49,30 @@
             var btnFire = document.getElementById("btnFire");
             var output = document.getElementById("output");
 
-            btnUp.addEventListener("onmousedown", function() {sendDirection({"action": "DRIVE", "button": "UP", "state": true})});
-            btnUp.addEventListener("pointerdown", function() {sendDirection({"action": "DRIVE", "button": "UP", "state": true})});
-            btnUp.addEventListener("onmouseup", function() {sendDirection({"action": "DRIVE", "button": "UP", "state": false})});
-            btnUp.addEventListener("pointerup", function() {sendDirection({"action": "DRIVE", "button": "UP", "state": false})});
+            btnUp.addEventListener("onmousedown", function() {sendData({"action": "DRIVE", "button": "UP", "state": true})});
+            btnUp.addEventListener("pointerdown", function() {sendData({"action": "DRIVE", "button": "UP", "state": true})});
+            btnUp.addEventListener("onmouseup", function() {sendData({"action": "DRIVE", "button": "UP", "state": false})});
+            btnUp.addEventListener("pointerup", function() {sendData({"action": "DRIVE", "button": "UP", "state": false})});
 
-            btnDown.addEventListener("onmousedown", function() {sendDirection({"action": "DRIVE", "button": "DOWN", "state": true})});
-            btnDown.addEventListener("pointerdown", function() {sendDirection({"action": "DRIVE", "button": "DOWN", "state": true})});
-            btnDown.addEventListener("onmouseup", function() {sendDirection({"action": "DRIVE", "button": "DOWN", "state": false})});
-            btnDown.addEventListener("pointerup", function() {sendDirection({"action": "DRIVE", "button": "DOWN", "state": false})});
+            btnDown.addEventListener("onmousedown", function() {sendData({"action": "DRIVE", "button": "DOWN", "state": true})});
+            btnDown.addEventListener("pointerdown", function() {sendData({"action": "DRIVE", "button": "DOWN", "state": true})});
+            btnDown.addEventListener("onmouseup", function() {sendData({"action": "DRIVE", "button": "DOWN", "state": false})});
+            btnDown.addEventListener("pointerup", function() {sendData({"action": "DRIVE", "button": "DOWN", "state": false})});
 
-            btnLeft.addEventListener("onmousedown", function() {sendDirection({"action": "DRIVE", "button": "LEFT", "state": true})});
-            btnLeft.addEventListener("pointerdown", function() {sendDirection({"action": "DRIVE", "button": "LEFT", "state": true})});
-            btnLeft.addEventListener("onmouseup", function() {sendDirection({"action": "DRIVE", "button": "LEFT", "state": false})});
-            btnLeft.addEventListener("pointerup", function() {sendDirection({"action": "DRIVE", "button": "LEFT", "state": false})});
+            btnLeft.addEventListener("onmousedown", function() {sendData({"action": "DRIVE", "button": "LEFT", "state": true})});
+            btnLeft.addEventListener("pointerdown", function() {sendData({"action": "DRIVE", "button": "LEFT", "state": true})});
+            btnLeft.addEventListener("onmouseup", function() {sendData({"action": "DRIVE", "button": "LEFT", "state": false})});
+            btnLeft.addEventListener("pointerup", function() {sendData({"action": "DRIVE", "button": "LEFT", "state": false})});
 
-            btnRight.addEventListener("onmousedown", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": true})});
-            btnRight.addEventListener("pointerdown", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": true})});
-            btnRight.addEventListener("onmouseup", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": false})});
-            btnRight.addEventListener("pointerup", function() {sendDirection({"action": "DRIVE", "button": "RIGHT", "state": false})});
+            btnRight.addEventListener("onmousedown", function() {sendData({"action": "DRIVE", "button": "RIGHT", "state": true})});
+            btnRight.addEventListener("pointerdown", function() {sendData({"action": "DRIVE", "button": "RIGHT", "state": true})});
+            btnRight.addEventListener("onmouseup", function() {sendData({"action": "DRIVE", "button": "RIGHT", "state": false})});
+            btnRight.addEventListener("pointerup", function() {sendData({"action": "DRIVE", "button": "RIGHT", "state": false})});
 
-            btnFire.addEventListener("pointerdown", function() {sendAction({"action": "FIRE", "state": true})});
-            btnFire.addEventListener("onmousedown", function() {sendAction({"action": "FIRE", "state": true})});
-            btnFire.addEventListener("onmouseup", function() {sendAction({"action": "FIRE", "state": false})});
-            btnFire.addEventListener("pointerup", function() {sendAction({"action": "FIRE", "state": false})});
+            btnFire.addEventListener("pointerdown", function() {sendData({"action": "FIRE", "state": true})});
+            btnFire.addEventListener("onmousedown", function() {sendData({"action": "FIRE", "state": true})});
+            btnFire.addEventListener("onmouseup", function() {sendData({"action": "FIRE", "state": false})});
+            btnFire.addEventListener("pointerup", function() {sendData({"action": "FIRE", "state": false})});
 
 
 
