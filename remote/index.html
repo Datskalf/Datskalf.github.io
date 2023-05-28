@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>Velvet controller</title>
+        <style>
+            canvas {
+                max-width: 200px;
+                width: 33%;
+                aspect-ratio: 1/1;
+            }
+
+            .dirBtn {
+                background-color: red;
+            }
+
+            .actionBtn {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="buttonGrid">
+            <div id="row1">
+                <canvas></canvas>
+                <canvas class="dirBtn" id="btnUp"></canvas>
+                <canvas></canvas>
+            </div>
+            <div id="row2">
+                <canvas class="dirBtn" id="btnLeft"></canvas>
+                <canvas class="actionBtn" id="btnFire"></canvas>
+                <canvas class="dirBtn" id="btnRight"></canvas>
+            </div>
+            <div id="row3">
+                <canvas></canvas>
+                <canvas class="dirBtn" id="btnDown"></canvas>
+                <canvas></canvas>
+            </div>
+        </div>
+
+        <script>
+            var btnUp = document.getElementById("btnUp");
+            var btnDown = document.getElementById("btnDown");
+            var btnLeft = document.getElementById("btnLeft");
+            var btnRight = document.getElementById("btnRight");
+
+            btnUp.addEventListener("onmousedown", function() {sendDirection("UP", true)});
+            btnUp.addEventListener("pointerdown", function() {sendDirection("UP", true)});
+            btnUp.addEventListener("onmouseup", function() {sendDirection("UP", false)});
+            btnUp.addEventListener("pointerup", function() {sendDirection("UP", false)});
+
+            btnDown.addEventListener("onmousedown", function() {sendDirection("DOWN", true)});
+            btnDown.addEventListener("pointerdown", function() {sendDirection("DOWN", true)});
+            btnDown.addEventListener("onmouseup", function() {sendDirection("DOWN", false)});
+            btnDown.addEventListener("pointerup", function() {sendDirection("DOWN", false)});
+
+            btnLeft.addEventListener("onmousedown", function() {sendDirection("LEFT", true)});
+            btnLeft.addEventListener("pointerdown", function() {sendDirection("LEFT", true)});
+            btnLeft.addEventListener("onmouseup", function() {sendDirection("LEFT", false)});
+            btnLeft.addEventListener("pointerup", function() {sendDirection("LEFT", false)});
+
+            btnRight.addEventListener("onmousedown", function() {sendDirection("RIGHT", true)});
+            btnRight.addEventListener("pointerdown", function() {sendDirection("RIGHT", true)});
+            btnRight.addEventListener("onmouseup", function() {sendDirection("RIGHT", false)});
+            btnRight.addEventListener("pointerup", function() {sendDirection("RIGHT", false)});
+
+
+
+            function sendDirection(btn, state) {
+                console.log("Button: " + btn + "; state: " + state);
+                return;
+                fetch("http://datsom.local:8080", {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        "button": btn,
+                        "state": state
+                    })
+                })
+                .then(response => response.json())
+                .then(response => console.log(JSON.stringify(response)))
+            }
+        </script>
+    </body>
+</HTML>
