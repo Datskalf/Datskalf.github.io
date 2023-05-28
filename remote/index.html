@@ -77,7 +77,15 @@
 
 
             function sendData(data) {
-                output.innerText = JSON.stringify(data);
+                string = "action: " + data["action"] + ", ";
+                if (data["action"] == "FIRE") {
+                    string += "state: " + data["state"];
+                }
+                else if (data["action"] == "DRIVE") {
+                    string += "button: " + data["button"] + ", state: " + data["state"];
+                }
+
+                output.innerText = string;
                 return;
                 send(data)
             }
