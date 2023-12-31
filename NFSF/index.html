@@ -72,6 +72,7 @@
             <div class="flex-container">
 
                 <code class="flex-item">
+                    // Stacked Squares<br/>
                     TRANSFORM t1 ROTATION 0 TRANSLATION (5,50) SCALE 0.8<br/>
                     <br/>
                     GRAPHIC g1 (0,0) (0,50) (50,50) (50,0)<br/>
@@ -81,6 +82,7 @@
                 </code>
 
                 <code class="flex-item">
+                    // Rotated Squares<br/>
                     TRANSFORM t ROTATION 10 TRANSLATION (0,0) SCALE 1.16<br/>
                     <br/>
                     GRAPHIC g (-10,-10) (-10,10) (10,10) (10,-10) (-10,-10)<br/>
@@ -90,6 +92,7 @@
                 </code>
 
                 <code class="flex-item">
+                    // Spiraling squares
                     TRANSFORM t1 ROTATION -24 TRANSLATION (4,0) SCALE 1.25<br/>
                     TRANSFORM t2 ROTATION -24 TRANSLATION (-4,0) SCALE 1.25<br/>
                     <br/>
@@ -101,6 +104,24 @@
                     <br/>
                     FRACTAL f2<br/>
                     BRANCH t2 [0:20] GRAPHIC g2<br/>
+                </code>
+
+                <code class="flex-item">
+                    // Sierpinski triangle<br/>
+                    TRANSFORM bol ROTATION 0 TRANSLATION (-129.90381,-75) SCALE 0.5<br/>
+                    TRANSFORM bor ROTATION 0 TRANSLATION (129.90381,-75) SCALE 0.5<br/>
+                    TRANSFORM top ROTATION 0 TRANSLATION (0,150) SCALE 0.5<br/>
+                    TRANSFORM none ROTATION 0 TRANSLATION (0,0) SCALE 1<br/>
+                    <br/>
+                    GRAPHIC outer (-259.80762,-150) (259.80762,-150) (0,300) (-259.80762,-150)<br/>
+                    GRAPHIC inner (-129.90381,75) (129.90381,75) (0,-150) (-129.90381,75)<br/>
+                    GRAPHIC none<br/>
+                    <br/>
+                    FRACTAL root<br/>
+                    BRANCH none [0:0] GRAPHIC outer<br/>
+                    BRANCH top [0:7] GRAPHIC inner<br/>
+                    BRANCH bol [0:7] GRAPHIC none<br/>
+                    BRANCH bor [0:7] GRAPHIC none<br/>
                 </code>
 
             </div>
