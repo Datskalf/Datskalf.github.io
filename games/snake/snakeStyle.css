@@ -1,0 +1,6 @@
+#gameArea {
+    margin: 0 auto;
+    width: 40%;
+    aspect-ratio: 1/1;
+    background-color: blue;
+}
