@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NFSF</title>
+        <script>
+            function renderImage() {
+                var inputData = document.getElementById("input").value;
+                var key = "";
+
+                fetch("http://132.145.77.110:5000/", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        'input': inputData,
+                    })
+                }).then(function(response) {
+                    response.json().then(function(data) {
+                        key = data['key'];
+                        console.log(key);
+                        let imageLink = "http://132.145.77.110:5000/image/" + key;
+                        console.log(imageLink);
+                        document.getElementById("output").src = imageLink;
+                    });
+                });
+            }
+        </script>
+
+        <style>
+            .flex-container {
+                display: flex;
+            }
+
+            .flex-item {
+                flex: 1 1 auto;
+                width: 50%;
+                height: 50%;
+                margin: 10px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>NFSF Designer</h1>
+        <div class="flex-container">
+
+            <div class="flex-item">
+                <h2>Designer</h2>
+                <textarea rows="20" cols="100" id="input"></textarea>
+                <br/>
+                <button onclick="renderImage()">Render</button>
+            </div>
+
+            <div class="flex-item">
+                <h2>Renderer</h2>
+                <img width="700px" height="700px" id="output" />
+            </div>
+
+        </div>
+    </body>
+</html>
