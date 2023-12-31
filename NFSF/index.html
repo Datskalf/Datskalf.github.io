@@ -7,7 +7,7 @@
                 var inputData = document.getElementById("input").value;
                 var key = "";
 
-                fetch("http://132.145.77.110:5000/", {
+                fetch("https://132.145.77.110:5000/", {
                     method: "POST",
                     body: JSON.stringify({
                         'input': inputData,
@@ -16,7 +16,7 @@
                     response.json().then(function(data) {
                         key = data['key'];
                         console.log(key);
-                        let imageLink = "http://132.145.77.110:5000/image/" + key;
+                        let imageLink = "https://132.145.77.110:5000/image/" + key;
                         console.log(imageLink);
                         document.getElementById("output").src = imageLink;
                     });
@@ -39,6 +39,14 @@
             h1 {
                 text-align: center;
             }
+
+            code {
+                display: block;
+                border: 1px solid black;
+                width: 400px;
+                padding: 4px;
+                margin: 4px;
+            }
         </style>
     </head>
     <body>
@@ -57,6 +65,42 @@
                 <img width="700px" height="700px" id="output" />
             </div>
 
+        </div>
+
+        <div>
+            <h2>Examples</h2>
+            <div class="flex-container">
+                <code class="flex-item">
+                    TRANSFORM t1 ROTATION 0 TRANSLATION (5,50) SCALE 0.8<br/>
+                    <br/>
+                    GRAPHIC g1 (0,0) (0,50) (50,50) (50,0)<br/>
+                    <br/>
+                    FRACTAL root<br/>
+                    BRANCH t1 [0:5] GRAPHIC g1
+                </code>
+                <code class="flex-item">
+                    TRANSFORM t ROTATION 10 TRANSLATION (0,0) SCALE 1.16<br/>
+                    <br/>
+                    GRAPHIC g (-10,-10) (-10,10) (10,10) (10,-10) (-10,-10)<br/>
+                    <br/>
+                    FRACTAL f<br/>
+                    BRANCH t [0:25] GRAPHIC g<br/>
+                </code>
+                <code class="flex-item">
+                    TRANSFORM t1 ROTATION -24 TRANSLATION (4,0) SCALE 1.25<br/>
+                    TRANSFORM t2 ROTATION -24 TRANSLATION (-4,0) SCALE 1.25<br/>
+                    <br/>
+                    GRAPHIC g1 (0,0) (0,20) (20,20) (20,0) (0,0)<br/>
+                    GRAPHIC g2 (0,0) (0,-8) (-8,-8) (-8,0) (0,0)<br/>
+                    <br/>
+                    FRACTAL f1<br/>
+                    BRANCH t1 [0:20] GRAPHIC g1<br/>
+                    <br/>
+                    FRACTAL f2<br/>
+                    BRANCH t2 [0:20] GRAPHIC g2<br/>
+
+                </code>
+            </div>
         </div>
     </body>
 </html>
