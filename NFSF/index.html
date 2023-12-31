@@ -7,7 +7,7 @@
                 var inputData = document.getElementById("input").value;
                 var key = "";
 
-                fetch("http://132.145.77.110:5000/", {
+                fetch("https://132.145.77.110:5000/", {
                     method: "POST",
                     body: JSON.stringify({
                         'input': inputData,
@@ -16,7 +16,7 @@
                     response.json().then(function(data) {
                         key = data['key'];
                         console.log(key);
-                        let imageLink = "http://132.145.77.110:5000/image/" + key;
+                        let imageLink = "https://132.145.77.110:5000/image/" + key;
                         console.log(imageLink);
                         document.getElementById("output").src = imageLink;
                     });
