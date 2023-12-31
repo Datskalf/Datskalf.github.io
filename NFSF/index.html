@@ -25,15 +25,16 @@
         </script>
 
         <style>
-            .flex-container {
-                display: flex;
+
+            #content {
+                display: grid;
+                grid-template-columns: 6fr 4fr;
+                grid-gap: 10px;
             }
 
-            .flex-item {
-                flex: 1 1 auto;
-                width: 50%;
-                height: 50%;
-                margin: 10px;
+            img {
+                width: 95%;
+                aspect-ratio: 1/1;
             }
 
             h1 {
@@ -55,9 +56,9 @@
     </head>
     <body>
         <h1>NFSF Designer</h1>
-        <div class="flex-container">
+        <div id="content">
 
-            <div class="flex-item">
+            <div id="input_div">
                 <h2>Designer</h2>
                 <textarea rows="20" cols="100" id="input"></textarea>
                 <br/>
@@ -124,9 +125,9 @@
                 </div>
             </div>
 
-            <div class="flex-item">
+            <div id="output_div">
                 <h2>Renderer</h2>
-                <img width="700px" height="700px" id="output" />
+                <img id="output" />
             </div>
 
         </div>
